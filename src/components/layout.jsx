@@ -3,6 +3,7 @@ import Canvas from './canvas';
 import NavBars from './navbars';
 import {Link} from 'react-scroll'
 import { SocialLinks } from '../sections';
+import { Outlet } from 'react-router';
 
 const Layout = ({ children }) => {
  
@@ -12,7 +13,7 @@ const Layout = ({ children }) => {
         <NavBars />
        
       <main className="main-container">
-        {children}
+        <Outlet/>
       </main>
       <Canvas/>
       </div>

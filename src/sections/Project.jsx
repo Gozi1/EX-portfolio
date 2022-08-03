@@ -1,4 +1,5 @@
 import { useRef} from 'react'
+import { Link } from 'react-router-dom';
 import { LoadingManager } from 'three';
 import { ProjectTemplate} from '../components';
 
@@ -10,6 +11,7 @@ const Project = () => {
   const text="an Arduino based Mapping Robot which automatically draws and  avoids the area around it "
   const text2='A flutter based Project that store user variable with the help of firebase'
   return (
+    <Link to="/mappingRobot">
     <div className='project' id='projects'>
          <div className='name'><h1 className='hoverHeader' >P</h1><h1 className='hoverHeader' >r</h1><h1 className='hoverHeader' >o</h1><h1 className='hoverHeader'>j</h1>
       <h1 className='hoverHeader'>e</h1><h1 className='hoverHeader'>c</h1>
@@ -23,6 +25,7 @@ const Project = () => {
         <ProjectTemplate img ={'waiting.jpeg'}  title={"more coming soon"}/>
         </div>
     </div>
+    </Link>
   )
 }
 

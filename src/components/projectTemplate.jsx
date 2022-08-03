@@ -1,9 +1,10 @@
 import React from 'react'
-
+import { Link } from "react-router-dom";
 function projectTemplate(props) {
   return (
     
-    <div className="bg-items">
+  // <Link to={props.url}>
+      <div className="bg-items">
     <div className="items" style={{backgroundImage : 'url('+props.img+')'}}>
       <div className="eleven i"></div>
       <div className="eleven ii"></div>
@@ -16,6 +17,7 @@ function projectTemplate(props) {
       </div>
     </div>
   </div>
+  // </Link>
   )
 }
 
