@@ -3,21 +3,22 @@ import { Link } from "react-router-dom";
 function projectTemplate(props) {
   return (
     
-  // <Link to={props.url}>
-      <div className="bg-items">
-    <div className="items" style={{backgroundImage : 'url('+props.img+')'}}>
-      <div className="eleven i"></div>
-      <div className="eleven ii"></div>
-      <div className="eleven iii"></div>
-      <div className="eleven iv"></div>
-      <div className="details">
-        <h3>{props.title}</h3>
-        <p>{props.text}</p>
-      
-      </div>
-    </div>
+  
+  <div className="Project-container">
+
+    <div className='Img-side-1st' style={{backgroundImage: `url(${props.img})`}}>      </div>
+  
+  <div className='Text-side-1st'>
+    <h1>{props.title}</h1>
+    <p>{props.text}</p>
+    {props.techList?
+    <ul className='Tech-list'>
+      {props.techList}
+    </ul>
+   :null }
   </div>
-  // </Link>
+  </div>
+
   )
 }
 

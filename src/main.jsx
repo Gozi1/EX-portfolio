@@ -8,14 +8,9 @@ import { Home } from "./sections";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-<BrowserRouter>
-<Routes>
-  <Route path="/" element={<Layout/>} >
-    <Route index element={<HomePage />} />
-    <Route path="flutter" element={<Flutter />} />
-    <Route path="MappingRobot" element={<MappingRobot />} />
-  </Route>
-</Routes>
 
-</BrowserRouter>
+  <Layout>
+    <App/>
+    </Layout>
+  
 );
