@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Gozi1.github.io/portfolio",
+  "homepage": "https://Gozi1.github.io",
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
