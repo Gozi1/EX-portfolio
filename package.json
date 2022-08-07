@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://gozi1.github.io/portfolio",
+  "homepage": "https://Gozi1.github.io/portfolio",
   "scripts": {
     "predeploy": "npm run dev",
     "deploy": "gh-pages -d build",
