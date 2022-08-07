@@ -146,7 +146,7 @@ canvas {
   background-position: 30% 50%;
   grid-column: 1/  8;
   border: 1px white;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 .Img-side-1st:hover{
   background-color: transparent;
