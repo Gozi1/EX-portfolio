@@ -149,15 +149,7 @@ canvas {
   border-radius: 10px;
 }
 .Img-side-1st:hover{
-  animation:colourChange 0.3s  ease-in-out forwards;
-}
-@keyframes colourChange {
-  from{
-    background-color: #1a0001;
-  }  
-  to{
-    background-color: transparent;
-  }
+  background-color: transparent;
 }
 .Text-side-1st{
   opacity: 1;
