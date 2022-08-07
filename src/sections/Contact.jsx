@@ -10,7 +10,7 @@ const Contact = () => {
         <h1  className='hoverHeader '>c</h1><h1 className='hoverHeader'>t</h1>
       </div>
       <p>I’m interested in freelance opportunities . 
-        However, if you have other request or question, don’t hesitate to use the form.</p>
+        However, if you have any other requests or questions, please don’t hesitate to use the form.</p>
     <form id="form" action="https://api.slapform.com/splVOl1Zv" method="post">
 		
     <input name="name" type="text" placeholder="NAME"/><br/>
