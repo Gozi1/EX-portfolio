@@ -187,6 +187,14 @@ canvas {
   text-align: right;
   font-weight: bolder;
   word-wrap: normal;
+
+}
+.Git-link{
+  position: relative;
+  top:40px
+}
+.Git-link svg{
+  transform: scale(200%);
 }
 .Text-side-1st h1:hover{
   color:#db050c;
@@ -610,6 +618,9 @@ nav.black .underline {
   }
   .Tech-list li{
     text-align: justify;
+  }
+  .Git-link{
+    top: -40px;
   }
 
 .xButton,.menuButton{

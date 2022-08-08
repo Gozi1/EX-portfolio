@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import {VscGithubInverted} from "react-icons/vsc"
 function projectTemplate(props) {
   return (
     
@@ -16,6 +17,9 @@ function projectTemplate(props) {
       {props.techList}
     </ul>
    :null }
+   {props.gitLink?
+   <a href={props.gitLink} className="Git-link"><VscGithubInverted/></a>:null
+   }
   </div>
   </div>
 
