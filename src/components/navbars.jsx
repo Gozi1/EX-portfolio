@@ -56,7 +56,7 @@ const navbars = () => {
   <Link  to="about"  spy={false} smooth={'easeInOutQuad'} offset={0} duration={400} onClick={() => setIsOpen(!isOpen)} >About</Link >
   <Link  to="projects"  spy={false} smooth={'easeInOutQuad'} offset={0} duration={400} onClick={() => setIsOpen(!isOpen)}>Projects</Link >
   <Link  to="contact" spy={false} smooth={'easeInOutQuad'} offset={0} duration={400} onClick={() => setIsOpen(!isOpen)} >Contact</Link >
-  <a href="resume.pdf" target="_blank"> Resume</a>
+  <a href="./resume.pdf" target="_blank"> Resume</a>
   <ul>
           <li><a href="https://www.instagram.com/haimgod_/"><ImInstagram/></a></li>
           <li><a href="https://www.linkedin.com/in/ngozi-nwabiani-13652a217/"><ImLinkedin2/></a></li>
