@@ -1,43 +1,44 @@
 import React, {useEffect, useState } from 'react'
 import {Link} from 'react-scroll'
-import { ImGithub,ImInstagram,ImLinkedin2} from "react-icons/im";
+import { ImGithub,ImInstagram,ImLinkedin2,ImMenu,ImCross} from "react-icons/im";
 
 const navbars = () => {
     
     const[navClass,setNavClass] = useState('')
-    // const controlNav = ()=>{
-    //     console.log(window.scrollY)
-    //     if(window.scrollY>100){
-           
-    //         setShow(false)
-    //         console.log("helo")
-    //     }else{
-    //         setShow(true)
-    //     }
-    // }
+    const [isOpen, setIsOpen] = useState(true);
+    console.log(isOpen)
     useEffect(() => {
         var lastScrollTop = 0;
         // clean up code
+        console.log(screen.width)
+        
         window.addEventListener('scroll',  function(){ // or window.addEventListener("scroll"....
+          
             var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+            
             if(window.scrollY<185){
                 setNavClass('')
             }
             else if (st > lastScrollTop){
                 setNavClass("hidden")
+                setIsOpen(true)
             } else {
                 
                setNavClass("navDisplay")
             }
+          
             lastScrollTop = st <= 0 ? 0 : st;},false)
+          
         
         return () => window.removeEventListener('scroll', scroll);
+          
+          
     }, []);
     
-    
+
     
   return (
-    <div className={ `${navClass}`}>
+    <div className={ `${navClass} navClass  ${isOpen && "open"}`}>
         <header  >
         
 <nav className="black">
@@ -51,18 +52,21 @@ const navbars = () => {
    
   </Link>
   </div>
-  <div className='links'>
-  <Link  to="about"  spy={false} smooth={'easeInOutQuad'} offset={0} duration={400}>About</Link >
-  <Link  to="projects"  spy={false} smooth={'easeInOutQuad'} offset={0} duration={400}>Projects</Link >
-  <Link  to="contact" spy={false} smooth={'easeInOutQuad'} offset={0} duration={400}>Contact</Link >
+  <div className={`links  ${isOpen && "open"}`}>
+  <Link  to="about"  spy={false} smooth={'easeInOutQuad'} offset={0} duration={400} onClick={() => setIsOpen(!isOpen)} >About</Link >
+  <Link  to="projects"  spy={false} smooth={'easeInOutQuad'} offset={0} duration={400} onClick={() => setIsOpen(!isOpen)}>Projects</Link >
+  <Link  to="contact" spy={false} smooth={'easeInOutQuad'} offset={0} duration={400} onClick={() => setIsOpen(!isOpen)} >Contact</Link >
   <a href="resume.pdf" target="_blank"> Resume</a>
-  <ul >
+  <ul>
           <li><a href="https://www.instagram.com/haimgod_/"><ImInstagram/></a></li>
           <li><a href="https://www.linkedin.com/in/ngozi-nwabiani-13652a217/"><ImLinkedin2/></a></li>
           <li><a   href="https://github.com/Gozi1"><ImGithub/></a></li>
         </ul>
   </div>
-
+  
+    <div className={`Nav-toggle ${!isOpen && "open"}`} onClick={() => setIsOpen(!isOpen)}>
+        <div className='bar'></div>
+    </div>
 </nav>
 
         </header>

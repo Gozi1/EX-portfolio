@@ -27,7 +27,7 @@
   }
   .appDiv{
     display: grid;
-    row-gap: 12rem;
+    row-gap: 13rem;
   }
   .page-wrap {
     min-height: 100%;
@@ -178,7 +178,6 @@ canvas {
 .Tech-list{
   display: flex;
   align-items: flex-end;
-  flex-wrap: wrap;
 }
 .Tech-list li{
   display:inline-block;
@@ -335,59 +334,15 @@ input, select, textarea {
   padding: 1em 0; 
 
 }
-.open{
+/* .open{
   width:100%
-}
+} */
 .hidden{
   display: none;
 }
-
-@media all and (max-width: 810px) {
-  .Img-side-1st{
-    display: none;
-  }
-  .Text-side-1st{
-    grid-column: 1/12;
-    margin:0;
-    width: 100%;
-  }
-  .Text-side-1st h1{
-    text-align: justify;
-  }
-header{
-  position: absolute; 
-  top: 0;
-  width:0%;
-  transition: 250ms width ease-in-out ;
-  background-color: #2b0117;
-  opacity: 1;
+.Nav-toggle{
+  display: none;
 }
-.xButton,.menuButton{
-  display: block;
-}
-.xButton{
-  color:white ;
-}
-/* .mobile-column{
-  display: grid;
-  grid-row-gap: 24rem; 
-  margin: auto;
-} */
-.contact textarea{
- 
-  width: 50%;
-}
-.contact button{
- 
-  width: 50%;
-}
-.contact input{
- 
-  width: 50%;
-}
-}
-
-
 
 footer a:hover{
   color: #1a0001;
@@ -402,7 +357,7 @@ header{
   top:0;
   width: 100%;
   height: 3rem;
-  z-index: 4;
+  
 }
 
 
@@ -415,6 +370,7 @@ header{
   transition: 0.5s ease-in;
   font-size: 0.9rem;
   font-weight: bold;
+  justify-content: space-between;
 }
 .navDisplay{
  
@@ -422,6 +378,7 @@ header{
   
 }
 .navDisplay header{
+  z-index: 3;
   background: #191919;
   opacity: 0.9;
   transition: 0.5s ease-in;
@@ -444,14 +401,15 @@ header{
   text-decoration:none;
 }
 .links svg{
-  width:15px;
+  width:30px;
   height: auto;
 }
 .links svg:hover{
   background-color: #1a0001;
-  width:20px;
+  transform: scale(150%);
   border: #310102 solid 0.5px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 
@@ -465,6 +423,14 @@ header{
   padding: 0 20px;
   list-style: none;
   width: 20px
+}
+.links ul{
+  position: fixed;
+  left:1em;
+  bottom:4em;
+  display: flex;
+  gap: 10em;
+  flex-direction: column;
 }
 
 .underline {
@@ -523,4 +489,151 @@ nav.black .underline {
 *{
   scrollbar-width: thin;
   scrollbar-color: var(--header-color) #191919;
+}
+@media all and (max-width: 810px) {
+  
+  .logos{
+    margin: 0;
+    width: 3.6em;
+  }
+  .Nav-toggle{
+    display: contents;
+    position: relative;
+    right: 0;
+    top:0;
+  }
+  .navDisplay header{
+    background: #310102;
+    opacity: 1;
+  }
+  .bar{
+    z-index: 5;
+    position: relative;
+    width: 32px;
+    height: 2px;
+    background: #ffffff;
+    transition: all 0.45s ease-in-out;
+  }
+  .navDisplay{
+    display: block;
+  }
+  .bar::after,.bar::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: all 0.45s ease-in-out;
+  }
+  .bar::before {
+    width: 25px;
+    transform: translateY(-8px);
+    right: 0;
+  }
+  .bar::after {
+    width: 32px;
+    transform: translateY(8px);
+  }
+  .Nav-toggle.open > .bar {
+    transform: translateX(-40px);
+    background: transparent;
+}
+
+.Nav-toggle.open > .bar::before {
+    width: 32px;
+    transform: rotate(45deg) translate(26px, -26px);
+}
+
+.Nav-toggle.open > .bar::after {
+  transform: rotate(-45deg) translate(26px, 26px);
+}
+    .navClass{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #310102;
+    z-index: 5;
+  }
+  .links{
+    position: relative;
+    top:3em;
+    font-size: 2rem;
+    display: grid;
+    row-gap: 2em;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    grid-template-columns: repeat(1,1fr);
+    
+  }
+  .links.open{
+    display: none;
+  }
+  .navClass.open{
+    background-color: transparent;
+  }
+  .links a{
+    padding: 0;
+  }
+  .links ul{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    position: relative;
+    left: auto;
+    bottom: auto;
+    gap:0;
+  }
+  .links svg{
+    width: 40px;
+  }
+  
+  .Img-side-1st{
+    display: none;
+  }
+  .Text-side-1st{
+    grid-column: 1/12;
+    margin:0;
+    width: 100%;
+  }
+  .Text-side-1st h1{
+    text-align: justify;
+  }
+  .Tech-list{
+    flex-wrap: wrap;
+  }
+  .Tech-list li{
+    text-align: justify;
+  }
+ header{
+  /* position: absolute; 
+  top: 0;
+  width:0%;
+  transition: 250ms width ease-in-out ; */
+  /* background-color: black; */
+  /* opacity: 1; */
+}
+.xButton,.menuButton{
+  display: block;
+}
+.xButton{
+  color:white ;
+}
+.mobile-column{
+  display: grid;
+  grid-row-gap: 24rem; 
+  margin: auto;
+}
+.contact textarea{
+ 
+  width: 50%;
+}
+.contact button{
+ 
+  width: 50%;
+}
+.contact input{
+ 
+  width: 50%;
+}
 }
