@@ -13,13 +13,12 @@ const About= () => {
      <h1 style={{marginLeft: "30PX"}} className='hoverHeader '>m</h1><h1 className='hoverHeader'>e</h1>
       </div>
       
-      <p>Hello ! the name's Ngozi and I love creating and re-imagining things that live on the internet.
-              I have finished my degree in computer engineering and lately I have taken a serious passion  for web design/development into a career.
+      <p>Hello! the name's Ngozi and I love creating and re-imagining things that live on the internet.
+              I have finished my degree in computer engineering and lately I have taken a serious passion for web design/development into a career.
                My main focus when working on projects is how can I make this user-friendly but also unique.    </p>
                
-      <p>I'm a well-organised person, problem solver with high attention to detail. 
-              I absolutely love  FPS games(like apexlegends,valorant,spellbreak and overwatch) , outdoor activities, Mainly psychological and Isekai Mangas.
-              Interested in the entire frontend spectrum and working on ambitious projects with positive people.</p>
+      <p>I'm well-organised ,a problem solver with high attention to detail. I absolutely love learning new things,I read manga mainly the psychological and Isekai kinds.
+        I am very Interested in the entire frontend spectrum because I will get to working on ambitious projects with like minded individuals </p>
               {/* <div className="imageBorder"><img  src = "starabout.jpg" alt="star"/></div>  */}
     </div>
   );

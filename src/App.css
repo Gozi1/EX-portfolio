@@ -3,7 +3,7 @@
 
 *{
   font-family:'Exo 2', sans-serif;
-
+  cursor: pointer;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -40,22 +40,22 @@ canvas {
   left: 0;
   height: 100%;
   width: 100%;
- 
   background: rgb(30, 30, 30);
-  cursor: none;
   z-index: -3;
   
 }
+
 .main-container{
   position: absolute;
   height: auto;
-  max-width:75%;
-  width: 100vw;
+  
+  width: auto;
   top:10%; 
   left:15%;
   display: flex;
   overflow-y:auto;
   overflow-x: hidden;
+  
  
 }
 
@@ -99,11 +99,12 @@ canvas {
 
 .home p{
   color: rgb(160, 160, 160);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bolder;
 }
 .about{
   height: auto; 
+  
 }
 
 .about p{
@@ -168,6 +169,7 @@ canvas {
   text-align:left;
   border-radius: 5px;
   padding: 2em 3em;
+  opacity: 0.9;
 }
 .Text-side-1st h1{
   font-size: 2.5rem;
@@ -188,7 +190,7 @@ canvas {
   word-wrap: normal;
 }
 .Text-side-1st h1:hover{
-  color:#1a0001;
+  color:#db050c;
 }
 .Text-side-1st:hover .Img-side-1st:hover .Project-container:hover{
   box-shadow: 0 0 11px rgba(33,33,33,.2); 
@@ -338,7 +340,8 @@ input, select, textarea {
   width:100%
 } */
 .hidden{
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 .Nav-toggle{
   display: none;
@@ -393,8 +396,8 @@ header{
 .links{
   display:flex;
   justify-content:space-between;
-
-  
+  transition: visibility 0s, opacity 0.5s linear;
+  font-size: large;
   margin:0,5px;
 }
 .links a, a:hover, a:active, a:visited, a:focus {
@@ -467,7 +470,7 @@ header{
   
 }
 .links a:hover{
-  color:#1a0001;
+  color:#db050c;
   filter: brightness(3);
 }
 
@@ -566,6 +569,9 @@ nav.black .underline {
     grid-template-columns: repeat(1,1fr);
     
   }
+  .links li{
+    padding:0;
+  }
   .links.open{
     display: none;
   }
@@ -584,6 +590,7 @@ nav.black .underline {
     bottom: auto;
     gap:0;
   }
+  
   .links svg{
     width: 40px;
   }
@@ -605,14 +612,7 @@ nav.black .underline {
   .Tech-list li{
     text-align: justify;
   }
- header{
-  /* position: absolute; 
-  top: 0;
-  width:0%;
-  transition: 250ms width ease-in-out ; */
-  /* background-color: black; */
-  /* opacity: 1; */
-}
+
 .xButton,.menuButton{
   display: block;
 }

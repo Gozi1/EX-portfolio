@@ -49,7 +49,7 @@ function canvas( ) {
     }
         const geometry = new THREE.SphereGeometry(0.20, 6, 5);
     
-    const material = new THREE.MeshBasicMaterial({ color: 0xFFB6C1});
+    const material = new THREE.MeshBasicMaterial({ color: 0xFF80FF});
     material.transparent=true;
     material.opacity=0;
     
@@ -83,16 +83,16 @@ function canvas( ) {
      }
 
   
-    const directionalLight= new THREE.DirectionalLight(0xEC7213,1)
+    const directionalLight= new THREE.DirectionalLight(0xEDEADE,1)
     // console.log(randomLightPosition())
     directionalLight.position.set(randomLightPosition()[0],randomLightPosition()[1],randomLightPosition()[3]);
     
     
-    const directionalLight2= new THREE.DirectionalLight( 0x7213ec, 1 );
+    const directionalLight2= new THREE.DirectionalLight( 0x0008B, 1 );
     
     directionalLight2.position.set(randomLightPosition()[0],randomLightPosition()[1],randomLightPosition()[3]);
     
-    const directionalLight3= new THREE.DirectionalLight(0x13EC72,1)
+    const directionalLight3= new THREE.DirectionalLight(0x36454F,1)
     
     directionalLight3.position.set(randomLightPosition()[0],randomLightPosition()[1],randomLightPosition()[3]);
 
@@ -103,7 +103,7 @@ function canvas( ) {
     sphere.add( ambientLight,directionalLight,directionalLight2,directionalLight3);
     console.log(0xff001)
     scene.add(sphere);
-    const rainGeometry = new THREE.ConeBufferGeometry(0.30, 2, 5);
+    const rainGeometry = new THREE.ConeBufferGeometry(0.30, 2, 5,14,3,true);
     const rainMaterial = new THREE.MeshPhongMaterial({ color: 0x540914,shininess:100,specular:0xc0c0c0});
     let rainParticle=[];
     function rain(){
@@ -130,9 +130,9 @@ function canvas( ) {
   
     function animate(){
       requestAnimationFrame(animate);
-      sphere.rotation.z +=0.015;
+      sphere.rotation.z +=0.005;
       for(let i=0;i<600;i++){
-           rainParticle[i].position.y<-40?rainParticle[i].position.y=50: rainParticle[i].position.y-=0.31;
+           rainParticle[i].position.y<-40?rainParticle[i].position.y=50: rainParticle[i].position.y-=0.15;
        }
       renderer.render(scene, camera);
       // console.log(scrollPercent);

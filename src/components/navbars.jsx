@@ -43,7 +43,7 @@ const navbars = () => {
         
 <nav className="black">
     <div className='logoClass'>
-  <Link to='home'   activeClass='' spy={false} smooth={'easeInOutQuad'} offset={0} duration={400}>
+  <Link to='home'   activeClass='' spy={false} smooth={'easeInOutQuad'} offset={-100} duration={400}>
        
   <svg className='logos'  viewBox="0 0 236 228" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect id="Rectangle 1" x="9" y="114" width="160" height="160" transform="rotate(-45 9 114)" fill="#1A000E"/>
