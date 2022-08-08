@@ -27,8 +27,8 @@ const Project = () => {
         <h3>Here are some things I’ve built :</h3>
         <div className='mobile-column'>
         <ProjectTemplate img ={img} text={text} title={title} techList={techList}/>
-        <ProjectTemplate img ={img2} text={text2} title={title2} techList={techList2}/>
-        <ProjectTemplate img ={img3} text={text3} title={title3} techList={techList3}/>
+        <a href='https://github.com/Gozi1/e-commerce-example'><ProjectTemplate img ={img2} text={text2} title={title2} techList={techList2}/></a>
+        <a href='https://github.com/Gozi1/Website-clone'><ProjectTemplate img ={img3} text={text3} title={title3} techList={techList3}/></a>
         </div>
     </div>
    
