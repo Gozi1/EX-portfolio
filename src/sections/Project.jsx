@@ -24,7 +24,7 @@ const Project = () => {
       <h1 className='hoverHeader'>e</h1><h1 className='hoverHeader'>c</h1>
        <h1  className='hoverHeader '>t</h1><h1 className='hoverHeader'>s</h1>
       </div>
-        <h3>Here are some things I’ve built :</h3>
+        <h3>Here are some things I’ve worked on :</h3>
         <div className='mobile-column'>
         <ProjectTemplate img ={img} text={text} title={title} techList={techList}/>
         <a href='https://github.com/Gozi1/e-commerce-example'><ProjectTemplate img ={img2} text={text2} title={title2} techList={techList2}/></a>
