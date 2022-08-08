@@ -17,7 +17,7 @@ const Home = () => {
       <h1 className='hoverHeader'> o</h1><h1 className='hoverHeader'> z</h1><h1 className='hoverHeader'> i</h1></div>
       <p>I create things for the internet </p>
       
-      <p >I’m a computer engineer apsiring to design and build exceptional digital experiences. </p>
+      <p >I’m a computer engineer aspiring to design and build exceptional digital experiences. </p>
     </main>
     
     </div>

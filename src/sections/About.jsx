@@ -15,9 +15,9 @@ const About= () => {
       
       <p>Hello ! the name's Ngozi and I love creating and re-imagining things that live on the internet.
               I have finished my degree in computer engineering and lately I have taken a serious passion  for web design/development into a career.
-               My main focus when working on project is how can I make this for the user and myself.    </p>
+               My main focus when working on projects is how can I make this user-friendly but also unique.    </p>
                
-      <p>Well-organised person, problem solver with high attention to detail. 
+      <p>I'm a well-organised person, problem solver with high attention to detail. 
               I absolutely love  FPS games(like apexlegends,valorant,spellbreak and overwatch) , outdoor activities, Mainly psychological and Isekai Mangas.
               Interested in the entire frontend spectrum and working on ambitious projects with positive people.</p>
               {/* <div className="imageBorder"><img  src = "starabout.jpg" alt="star"/></div>  */}
