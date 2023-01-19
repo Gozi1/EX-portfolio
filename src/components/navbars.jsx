@@ -6,15 +6,12 @@ const navbars = () => {
     
     const[navClass,setNavClass] = useState('')
     const [isOpen, setIsOpen] = useState(true);
-    console.log(isOpen)
     useEffect(() => {
         var lastScrollTop = 0;
         // clean up code
-        console.log(screen.width)
-        
-        window.addEventListener('scroll',  function(){ // or window.addEventListener("scroll"....
+        window.addEventListener('scroll',  function(){ 
           
-            var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+            var st = window.pageYOffset || document.documentElement.scrollTop; 
             
             if(window.scrollY<185){
                 setNavClass('')

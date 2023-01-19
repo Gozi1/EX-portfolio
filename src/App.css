@@ -366,8 +366,8 @@ header{
   position: fixed;
   top:0;
   width: 100%;
-  height: 3rem;
-  
+  height: 5rem;
+  padding-top: 2rem;
 }
 
 
@@ -502,6 +502,9 @@ nav.black .underline {
 }
 @media all and (max-width: 810px) {
   
+.main-container {
+    left: 1rem
+  }
   .logos{
     margin: 0;
     width: 3.6em;
@@ -513,7 +516,7 @@ nav.black .underline {
     top:0;
   }
   .navDisplay header{
-    background: #310102;
+    background: black;
     opacity: 1;
   }
   .bar{
@@ -559,8 +562,7 @@ nav.black .underline {
 }
     .navClass{
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: #310102;
     z-index: 5;
   }
@@ -577,7 +579,7 @@ nav.black .underline {
     
   }
   .links li{
-    padding:0;
+    padding-right:5rem;
   }
   .links.open{
     display: none;
@@ -590,7 +592,6 @@ nav.black .underline {
   }
   .links ul{
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
     position: relative;
     left: auto;
@@ -622,7 +623,16 @@ nav.black .underline {
   .Git-link{
     top: -40px;
   }
-
+  /* .Text-side-1st p {
+    background-color: none;
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+    margin-right: 0;
+    text-align: left;
+    border-radius: 0;
+    padding: 0;
+     opacity: 0.9;
+}  */
 .xButton,.menuButton{
   display: block;
 }

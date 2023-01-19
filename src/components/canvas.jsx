@@ -84,7 +84,7 @@ function canvas( ) {
 
   
     const directionalLight= new THREE.DirectionalLight(0xEDEADE,1)
-    // console.log(randomLightPosition())
+   
     directionalLight.position.set(randomLightPosition()[0],randomLightPosition()[1],randomLightPosition()[3]);
     
     
@@ -101,7 +101,6 @@ function canvas( ) {
     const ambientLight = new THREE.AmbientLight(0xffff,1);
     
     sphere.add( ambientLight,directionalLight,directionalLight2,directionalLight3);
-    console.log(0xff001)
     scene.add(sphere);
     const rainGeometry = new THREE.ConeBufferGeometry(0.30, 2, 5,14,3,true);
     const rainMaterial = new THREE.MeshPhongMaterial({ color: 0x540914,shininess:100,specular:0xc0c0c0});
@@ -135,7 +134,7 @@ function canvas( ) {
            rainParticle[i].position.y<-40?rainParticle[i].position.y=50: rainParticle[i].position.y-=0.15;
        }
       renderer.render(scene, camera);
-      // console.log(scrollPercent);
+     
     
     }
     

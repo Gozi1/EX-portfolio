@@ -14,12 +14,12 @@ const Layout = ({ children }) => {
        
       <main className="main-container">
         {children}
+        
       </main>
       <Canvas/>
+      
       </div>
-      <footer>
-      <p>© All Rights Reserved by <Link to='home'   activeClass='' spy={false} smooth={'easeInOutQuad'} offset={0} duration={400}>Ngozi</Link></p>
-      </footer>
+      
   </div>
      
   )
